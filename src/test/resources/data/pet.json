@@ -1,0 +1,18 @@
+{
+  "id": 16484516,
+  "category": {
+    "id": 2,
+    "name": "gato"
+  },
+  "name": "Kuro",
+  "photoUrls": [
+    "https://i.pinimg.com/originals/74/29/08/7429088017337476a1449c21ce190168.jpg"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "preto"
+    }
+  ],
+  "status": "available"
+}

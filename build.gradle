@@ -12,6 +12,8 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation 'org.testng:testng:7.4.0'
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation 'io.rest-assured:rest-assured:4.4.0'
 }
 
 test {
