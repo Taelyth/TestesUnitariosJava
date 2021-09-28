@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/jaque/IdeaProjects/TestesUnitariosJava/src/test/java/apiTests">
+        <classes>
+            <class name="apiTests.Pet">
+                <methods><include name="incluirPet"/>
+                    <include name="consultarPet"/>
+                    <include name="alterarPet"/>
+                    <include name="deletarPet"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

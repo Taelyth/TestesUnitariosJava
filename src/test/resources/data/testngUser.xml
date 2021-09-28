@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/jaque/IdeaProjects/TestesUnitariosJava/src/test/java/apiTests/User.java">
+        <classes>
+            <class name="apiTests.User">
+                <methods>
+                    <include name="incluirUser"/>
+                    <include name="consultarUser"/>
+                    <include name="login"/>
+                    <include name="alterarUser"/>
+                    <include name="deletarUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

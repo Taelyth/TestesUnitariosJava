@@ -16,7 +16,11 @@
     {
       "id": 2,
       "name": "manchado"
+    },
+    {
+      "id": 3,
+      "name": "vermifugado"
     }
   ],
-  "status": "available"
+  "status": "sold"
 }
