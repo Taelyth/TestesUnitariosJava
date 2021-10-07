@@ -20,6 +20,10 @@ dependencies {
     implementation 'commons-io:commons-io:2.11.0'
     // https://mvnrepository.com/artifact/com.opencsv/opencsv
     implementation 'com.opencsv:opencsv:5.5.2'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation 'io.cucumber:cucumber-java:7.0.0'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
+    implementation 'io.cucumber:cucumber-testng:7.0.0'
 }
 
 test {

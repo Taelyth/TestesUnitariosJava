@@ -50,10 +50,12 @@ public class Evidencias {
         List<String[]> linhas = new ArrayList<>();
         linhas.add(new String[]{dataHoraSegundos, casoDeTeste, mensagem});
 
+        /*
         // Comentário: como fazer um arquivo apenas no final,
         // e fora do comentário como fazer um append em um arquivo que já existe.
-        //Writer escritor = Files.newBufferedWriter(Paths.get("target/logs/log" + this.dataHora+ ".csv"));
-        //CSVWriter escritorCSV = new CSVWriter(escritor);
+        Writer escritor = Files.newBufferedWriter(Paths.get("target/logs/log" + this.dataHora+ ".csv"));
+        CSVWriter escritorCSV = new CSVWriter(escritor);
+        */
 
         CSVWriter escritorCSV = new CSVWriter(new FileWriter("target/logs/log-" + this.data + ".csv", true));
 
