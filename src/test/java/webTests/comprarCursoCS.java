@@ -24,7 +24,7 @@ public class comprarCursoCS {
     @Before
     public void iniciar()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver\\94\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver\\95\\chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
@@ -94,5 +94,12 @@ public class comprarCursoCS {
         assertEquals(driver.findElement(By.cssSelector("span.new-price")).getText(), preco);
 
         System.out.println("6 - Validou nome como " + curso + " e preco do curso como " + preco);
+    }
+
+    @E("pressiono Enter")
+    public void pressionoEnter() {
+        driver.findElement(By.id("searchtext")).sendKeys(Keys.ENTER);
+
+        System.out.println("3a - Pressionou Enter");
     }
 }
