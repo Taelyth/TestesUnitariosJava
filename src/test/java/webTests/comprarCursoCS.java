@@ -9,17 +9,18 @@ import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
 public class comprarCursoCS {
 
     WebDriver driver;
+    WebDriverWait wait;
 
     @Before
     public void iniciar()
@@ -27,9 +28,9 @@ public class comprarCursoCS {
         System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver\\95\\chromedriver.exe");
         driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
+        //driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize(); // maximizar janela
-
+        wait = new WebDriverWait(driver, 3);
         System.out.println("0 - Antes do Teste iniciar");
     }
 
@@ -70,8 +71,7 @@ public class comprarCursoCS {
     @Entao("vejo a lista de resultados para o termo {string}")
     public void vejoAListaDeResultadosParaOTermo(String curso) {
 
-        WebDriverWait espera = new WebDriverWait(driver, 30);
-        espera.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.titulo"), curso));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.titulo"), curso));
 
         assertEquals(driver.findElement(By.cssSelector("span.titulo")).getText(), curso);
         assertEquals(driver.findElement(By.cssSelector("h3:nth-child(1)")).getText(), "Cursos › \""+ curso +"\"");
@@ -101,5 +101,27 @@ public class comprarCursoCS {
         driver.findElement(By.id("searchtext")).sendKeys(Keys.ENTER);
 
         System.out.println("3a - Pressionou Enter");
+    }
+
+    @Quando("clico no botao Ok!")
+    public void clicoNoBotaoOk() {
+        driver.findElement(By.cssSelector("div.cc-compliance")).click();
+    }
+
+    @E("clico na imagem de um Curso")
+    public void clicoNaImagemDeUmCurso() {
+        WebElement saibaMais = driver.findElement(By.cssSelector("a[title = \"Formação em Teste de Software (On Demand)\"]"));
+
+        // Ir com o mouse até o elemento (mouse hover):
+        Actions actions = new Actions(driver);
+        actions.moveToElement(saibaMais).build().perform();
+
+        driver.findElement(By.cssSelector("a[title = \"Formação em Teste de Software (On Demand)\"] > span.mais")).click();
+
+    }
+
+    @Entao("vejo a pagina com detalhes do Curso")
+    public void vejoAPaginaComDetalhesDoCurso() {
+        assertEquals(driver.getTitle(), "Formação em Teste de Software (On Demand) - Iterasys");
     }
 }
