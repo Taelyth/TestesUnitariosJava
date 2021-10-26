@@ -9,6 +9,7 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +42,7 @@ public class seleniumSimples {
         System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver\\94\\chromedriver.exe");
         //Instanciar o objeto do Selenium como controlador do Chrome
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS); // espera implícita entre cada teste
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(60000)); // espera implícita entre cada teste
     }
 
     @AfterMethod
@@ -63,7 +64,7 @@ public class seleniumSimples {
         driver.findElement(By.id("searchtext")).sendKeys("mantis");     // digita "mantis" no campo
         driver.findElement(By.id("btn_form_search")).click();                       // clica na Lupa
 
-        WebDriverWait espera = new WebDriverWait(driver, 30);
+        WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(30));
         espera.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.titulo"), "Mantis"));
 
         assertEquals(driver.findElement(By.cssSelector("span.titulo")).getText(), "Mantis");
