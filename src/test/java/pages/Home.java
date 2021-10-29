@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class Home {
     // Classe de Mapeamento possui 3 seções
@@ -18,6 +19,12 @@ public class Home {
     // 2 — Construtor
     public Home(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void acessarPaginaInicial()
+    {
+        driver.get("https://iterasys.com.br/");
     }
 
     // 3 — Funções e Métodos
@@ -28,9 +35,10 @@ public class Home {
         caixaDePesquisa.sendKeys(curso);
     }
 
-    public void clicarNaLupa()
+    public Busca clicarNaLupa()
     {
         lupa.click();
+        return new Busca(driver);
     }
 
 }
