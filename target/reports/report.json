@@ -1,1 +1,158 @@
-[{"line":3,"elements":[{"start_timestamp":"2021-10-29T22:31:47.911Z","before":[{"result":{"duration":11404437500,"status":"passed"},"match":{"location":"stepsPO.comprarCursoPO.inicializar()"}},{"result":{"duration":998900,"status":"passed"},"match":{"location":"stepsPO.Hooks.iniciar()"}}],"line":5,"name":"Pesquisar Curso com Clique e Incluir no Carrinho PO","description":"","id":"comprar-curso-po;pesquisar-curso-com-clique-e-incluir-no-carrinho-po","after":[{"result":{"duration":999100,"status":"passed"},"match":{"location":"stepsPO.Hooks.finalizar()"}},{"result":{"duration":2719832200,"status":"passed"},"match":{"location":"stepsPO.comprarCursoPO.tearDown()"}}],"type":"scenario","keyword":"Cenario","steps":[{"result":{"duration":5608720700,"status":"passed"},"line":6,"name":"que acesso a home da Iterasys","match":{"location":"stepsPO.comprarCursoPO.queAcessoAHomeDaIterasys()"},"keyword":"Dado "},{"result":{"duration":726446400,"status":"passed"},"line":7,"name":"procuro por \"Mantis\"","match":{"arguments":[{"val":"\"Mantis\"","offset":12}],"location":"stepsPO.comprarCursoPO.procuroPor(java.lang.String)"},"keyword":"Quando "},{"result":{"duration":1087275800,"status":"passed"},"line":8,"name":"clico no botao da Lupa","match":{"location":"stepsPO.comprarCursoPO.clicoNoBotaoDaLupa()"},"keyword":"E "},{"result":{"duration":1427106800,"status":"passed"},"line":9,"name":"vejo os resultados para o termo \"Mantis\"","match":{"arguments":[{"val":"\"Mantis\"","offset":32}],"location":"stepsPO.comprarCursoPO.vejoOsResultadosParaOTermo(java.lang.String)"},"keyword":"Entao "},{"result":{"duration":855254600,"status":"passed"},"line":10,"name":"clico no botao Matricule-se","match":{"location":"stepsPO.comprarCursoPO.clicoNoBotaoMatriculeSe()"},"keyword":"Quando "},{"result":{"duration":1542915600,"status":"passed"},"line":11,"name":"confirmo o nome como \"Mantis\" e o preco de \"R$ 59,99\"","match":{"arguments":[{"val":"\"Mantis\"","offset":21},{"val":"\"R$ 59,99\"","offset":43}],"location":"stepsPO.comprarCursoPO.confirmoONomeComoEOPrecoDe(java.lang.String,java.lang.String)"},"keyword":"Entao "}]}],"name":"Comprar Curso PO","description":"","id":"comprar-curso-po","keyword":"Funcionalidade","uri":"file:src/test/resources/featuresPO/comprarCursoPO.feature","tags":[]}]
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-29T22:31:47.911Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11404437500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsPO.comprarCursoPO.inicializar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 998900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsPO.Hooks.iniciar()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Pesquisar Curso com Clique e Incluir no Carrinho PO",
+        "description": "",
+        "id": "comprar-curso-po;pesquisar-curso-com-clique-e-incluir-no-carrinho-po",
+        "after": [
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsPO.Hooks.finalizar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2719832200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsPO.comprarCursoPO.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5608720700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "que acesso a home da Iterasys",
+            "match": {
+              "location": "stepsPO.comprarCursoPO.queAcessoAHomeDaIterasys()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 726446400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "procuro por \"Mantis\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mantis\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepsPO.comprarCursoPO.procuroPor(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1087275800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clico no botao da Lupa",
+            "match": {
+              "location": "stepsPO.comprarCursoPO.clicoNoBotaoDaLupa()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1427106800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "vejo os resultados para o termo \"Mantis\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mantis\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepsPO.comprarCursoPO.vejoOsResultadosParaOTermo(java.lang.String)"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 855254600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clico no botao Matricule-se",
+            "match": {
+              "location": "stepsPO.comprarCursoPO.clicoNoBotaoMatriculeSe()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1542915600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "confirmo o nome como \"Mantis\" e o preco de \"R$ 59,99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mantis\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"R$ 59,99\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepsPO.comprarCursoPO.confirmoONomeComoEOPrecoDe(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ]
+      }
+    ],
+    "name": "Comprar Curso PO",
+    "description": "",
+    "id": "comprar-curso-po",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/featuresPO/comprarCursoPO.feature",
+    "tags": []
+  }
+]
